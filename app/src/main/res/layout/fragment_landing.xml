@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".splash.LandingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="LANDING" />
+        android:id="@+id/meet_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/meet_new"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_percent=".7"
+        style="@style/SplashH1Text"/>
 
-</FrameLayout>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/meet_new"
+        app:layout_constraintLeft_toLeftOf="@id/meet_new"
+        android:text="@string/doggos"
+        style="@style/SplashH1Text.Orange"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
