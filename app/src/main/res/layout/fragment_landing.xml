@@ -6,6 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".splash.LandingFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_splash_screen_bg1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <TextView
         android:id="@+id/meet_new"
         android:layout_width="0dp"
@@ -23,5 +31,6 @@
         app:layout_constraintLeft_toLeftOf="@id/meet_new"
         android:text="@string/doggos"
         style="@style/SplashH1Text.Orange"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
