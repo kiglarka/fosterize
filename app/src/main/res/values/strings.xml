@@ -11,5 +11,5 @@
     <string name="already_have_account">I do already have an account. <u>Login</u></string>
     <string name="no_account">I do not have an account yet. <u>Sign up</u></string>
     <string name="login">Login</string>
-    <string name="login">Login</string>
+
 </resources>
