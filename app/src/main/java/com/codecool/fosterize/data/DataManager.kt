@@ -50,6 +50,7 @@ class DataManager {
             .addOnCompleteListener(){
                 if (!it.isSuccessful) return@addOnCompleteListener
                 user = auth.currentUser
+                Log.d(TAG, "loginUser: successful ${user?.email}")
                 // go to MainFragment
             }
             .addOnFailureListener(){
