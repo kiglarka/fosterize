@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fosterize</string>
+    <string name="hello_blank_fragment">Szia, Uram!</string>
+    <string name="registration">Regisztráció</string>
+    <string name="username">Felhasználónév</string>
+    <string name="email">E-mail</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Tovább</string>
+    <string name="no_account">Nincs még hozzáférésem, szeretnék <u>regisztrálni</u></string>
+    <string name="already_have_account">Már van jelszavam, szeretnék <u>belépni</u></string>
+    <string name="submit">Tovább</string>
+    <string name="sign_up">Tovább</string>
+</resources>
