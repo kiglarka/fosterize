@@ -37,7 +37,7 @@ class LandingFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        findNavController().navigate(R.id.action_landingFragment_to_loginFragment)
+        findNavController().navigate(R.id.action_landingFragment_to_registrationFragment)
         return inflater.inflate(R.layout.fragment_landing, container, false)
     }
 
