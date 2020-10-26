@@ -11,9 +11,13 @@ import android.widget.Toast
 import com.codecool.fosterize.R
 import kotlinx.android.synthetic.main.fragment_registration.*
 
-class RegistrationFragment : Fragment(),RegistrationContract.RegistrationView {
+class RegistrationFragment : Fragment(), RegistrationContract.RegistrationView {
 
-    data class Registration(val userName: String = "", val email: String = "", val password: String = "")
+    data class Registration(
+        val userName: String = "",
+        val email: String = "",
+        val password: String = ""
+    )
 
     private val presenter = RegistrationPresenter()
 
@@ -24,26 +28,29 @@ class RegistrationFragment : Fragment(),RegistrationContract.RegistrationView {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_registration, container, false)
     }
-    
+
 
     override fun onResume() {
         super.onResume()
         presenter.onAttach(this)
+
         submitButton.setOnClickListener {
             val username = userNameField.text.toString()
             val email = emailField.text.toString()
             val password1 = password1Field.text.toString()
             val password2 = password2Field.text.toString()
 
-            if (presenter.checkRegistrationInput(username,email,password1, password2)){
+            if (presenter.checkRegistrationInput(username, email, password1, password2)) {
                 Log.d(TAG, "onResume: $username, $email")
-                //presenter.makeUserAuthenticated(username,email,password1)
+                presenter.makeUserAuthenticated(username, email, password1)
 
             }
-            
         }
     }
 
+    override fun showMessage(message: CharSequence) {
+        Toast.makeText(activity,message,Toast.LENGTH_SHORT).show()
+    }
 
 
     companion object {

@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:text="@string/username" />
+            android:hint="@string/username" />
 
         <EditText
             android:id="@+id/emailField"
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:text="@string/email" />
+            android:hint="@string/email" />
 
         <EditText
             android:id="@+id/password1Field"
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:text="@string/password" />
+            android:hint="@string/password" />
 
         <EditText
             android:id="@+id/password2Field"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:text="@string/password" />
+            android:hint="@string/password" />
 
         <Button
             android:id="@+id/submitButton"
@@ -83,7 +83,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/submitButton"
-            android:text="@string/i_do_already_have_an_account_login"/>
+            android:text="@string/already_have_account"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

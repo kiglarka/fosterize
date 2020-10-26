@@ -6,6 +6,7 @@ interface RegistrationContract {
 
     interface RegistrationView {
 
+        fun showMessage(message: CharSequence)
     }
 
     interface RegistrationPresenter {
@@ -18,5 +19,7 @@ interface RegistrationContract {
             password1: String,
             password2: String
         ): Boolean
+
+        fun makeUserAuthenticated(username: String, email: String, password1: String)
     }
 }
