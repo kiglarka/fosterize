@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "778338331142",
+    "firebase_url": "https://fosterize-6238d.firebaseio.com",
+    "project_id": "fosterize-6238d",
+    "storage_bucket": "fosterize-6238d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778338331142:android:9eb242b2e38f5aed1c7187",
+        "android_client_info": {
+          "package_name": "com.codecool.fosterize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778338331142-0taa1amk4bc8ta2kd2i8j3i2l0kc1641.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-RCNGHeJv6HbuW_-oL0W3mAmw72DdFnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778338331142-0taa1amk4bc8ta2kd2i8j3i2l0kc1641.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
