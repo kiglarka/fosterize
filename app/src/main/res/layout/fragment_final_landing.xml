@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash.screens.ThirdLandingFragment">
+
+    <TextView
+        android:id="@+id/join"
+        style="@style/SplashH1Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/join_to_our"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/community"
+        style="@style/SplashH1Text.Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/community"
+        app:layout_constraintLeft_toLeftOf="@id/join"
+        app:layout_constraintTop_toBottomOf="@id/join" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="@string/app_desc"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/community"
+        app:layout_constraintWidth_percent=".7" />
+
+    <Button
+        android:id="@+id/join_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:text="@string/join_fosterize"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="@id/desc"
+        app:layout_constraintRight_toRightOf="@id/desc"
+        app:layout_constraintTop_toBottomOf="@id/desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/landingFragment">
+    app:startDestination="@id/splashScreenContainerFragment">
 
     <fragment
         android:id="@+id/registrationFragment"
@@ -24,14 +24,14 @@
             app:destination="@id/registrationFragment" />
     </fragment>
     <fragment
-        android:id="@+id/landingFragment"
-        android:name="com.codecool.fosterize.splash.LandingFragment"
-        android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" >
+        android:id="@+id/splashScreenContainerFragment"
+        android:name="com.codecool.fosterize.splash.SplashScreenContainerFragment"
+        android:label="fragment_splash_screen_container"
+        tools:layout="@layout/fragment_splash_screen_container" >
         <action
-            android:id="@+id/action_landingFragment_to_registrationFragment"
+            android:id="@+id/action_splashScreenContainerFragment_to_registrationFragment"
             app:destination="@id/registrationFragment"
-            app:popUpTo="@id/landingFragment"
+            app:popUpTo="@id/splashScreenContainerFragment"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>
