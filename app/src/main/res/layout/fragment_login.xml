@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".login.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,13 +11,13 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_margin="@dimen/default_margin"
             android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
             android:text="@string/login"
-            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,45 +25,45 @@
 
         <EditText
             android:id="@+id/emailField"
-            app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:hint="@string/email" />
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header" />
 
         <EditText
             android:id="@+id/passwordField"
-            app:layout_constraintTop_toBottomOf="@id/emailField"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailField" />
 
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
             android:backgroundTint="#FF9548"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@android:color/white"
-            android:text="@string/login"
-            android:layout_margin="@dimen/default_margin"
             app:layout_constraintTop_toBottomOf="@id/passwordField" />
 
         <TextView
             android:id="@+id/refToRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/no_account"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/submitButton"
-            android:text="@string/no_account"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/submitButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

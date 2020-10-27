@@ -46,11 +46,12 @@
         android:backgroundTint="@color/orange"
         android:fontFamily="@font/roboto_bold"
         android:padding="10dp"
-        android:text="JOIN FOSTERIZE"
+        android:text="@string/join_fosterize"
         android:textAllCaps="true"
         android:textSize="26sp"
         app:layout_constrainedWidth="true"
         app:layout_constraintLeft_toLeftOf="@id/desc"
         app:layout_constraintRight_toRightOf="@id/desc"
         app:layout_constraintTop_toBottomOf="@id/desc" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
