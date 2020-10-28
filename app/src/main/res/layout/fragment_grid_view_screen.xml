@@ -6,11 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".main_page.view.screens.GridViewScreen">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.codecool.fosterize.main_page.AutoFitGridRecycler
         android:id="@+id/grid_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:columnWidth="180dp"
+        android:numColumns="auto_fit"
+        android:padding="5dp"
+        android:listSelector="@android:color/transparent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
