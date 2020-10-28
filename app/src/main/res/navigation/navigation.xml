@@ -22,6 +22,11 @@
         <action
             android:id="@+id/action_loginFragment_to_registrationFragment2"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/splashScreenContainerFragment"
@@ -34,4 +39,9 @@
             app:popUpTo="@id/splashScreenContainerFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.codecool.fosterize.main_page.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" />
 </navigation>
