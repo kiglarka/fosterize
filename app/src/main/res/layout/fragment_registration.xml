@@ -30,6 +30,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="10dp"
             android:hint="@string/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +44,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
             android:hint="@string/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +58,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:hint="@string/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,28 +68,30 @@
 
         <EditText
             android:id="@+id/password2Field"
-            android:layout_width="0dp"
-            app:layout_constraintWidth_percent=".7"
             style="@style/CustomEditText.LoginPage"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:hint="@string/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/password1Field" />
+            app:layout_constraintTop_toBottomOf="@id/password1Field"
+            app:layout_constraintWidth_percent=".7" />
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="0dp"
-            app:layout_constraintLeft_toLeftOf="@id/password2Field"
-            app:layout_constraintRight_toRightOf="@id/password2Field"
-            app:layout_constrainedWidth="true"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:backgroundTint="#FF9548"
             android:text="@string/sign_up"
-            android:textSize="22sp"
             android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toLeftOf="@id/password2Field"
+            app:layout_constraintRight_toRightOf="@id/password2Field"
             app:layout_constraintTop_toBottomOf="@id/password2Field" />
 
         <TextView
