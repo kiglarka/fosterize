@@ -1,6 +1,7 @@
 package com.codecool.fosterize.main_page.view.screens
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -37,6 +38,7 @@ class GridViewScreen : Fragment() {
             Doggo("id", "Olajos", 3, 1, 1, 1, true, true, "asd", true),
         )
         grid_recycler.adapter = GridViewScreenAdapter(listOfDoggos, layoutInflater)
+        Log.d("GridViewScreen", "Attached the adapter")
     }
 }
 
@@ -61,6 +63,8 @@ private class GridViewScreenAdapter(
             Picasso.get().load("https://wallpaperaccess.com/full/1101027.jpg")
                 .into(view.doggo_iv)
             view.name_tv.text = "${doggo.name} (${doggo.age})"
+            Log.d("GridViewScreenAdapter", "${doggo.name}")
+          //  view.blurkit.startBlur()
         }
     }
 }
