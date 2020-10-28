@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".splash.screens.LandingFragment">
 
     <ImageView
@@ -11,36 +11,39 @@
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
         android:src="@drawable/ic_splash_screen_bg1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/meet_new"
+        style="@style/SplashH1Text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/meet_new"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintWidth_percent=".7"
-        style="@style/SplashH1Text"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".7" />
 
     <TextView
+        style="@style/SplashH1Text.Orange"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/meet_new"
-        app:layout_constraintLeft_toLeftOf="@id/meet_new"
         android:text="@string/doggos"
-        style="@style/SplashH1Text.Orange"/>
+        app:layout_constraintLeft_toLeftOf="@id/meet_new"
+        app:layout_constraintTop_toBottomOf="@id/meet_new" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".6"
+        app:lottie_scale="0.05"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_url="https://assets8.lottiefiles.com/datafiles/qPXWoBoTK5HTARv/data.json"/>
+        app:lottie_url="https://assets8.lottiefiles.com/datafiles/qPXWoBoTK5HTARv/data.json" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

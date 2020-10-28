@@ -14,11 +14,11 @@
 
         <TextView
             android:id="@+id/header"
+            style="@style/SplashH1Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
-            android:text="@string/registration"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="@string/app_name"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,37 +26,45 @@
 
         <EditText
             android:id="@+id/userNameField"
-            android:layout_width="match_parent"
+            style="@style/CustomEditText.LoginPage"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin"
+            android:layout_marginTop="80dp"
             android:hint="@string/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header" />
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintWidth_percent=".7" />
 
         <EditText
             android:id="@+id/emailField"
-            android:layout_width="match_parent"
+            style="@style/CustomEditText.LoginPage"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:hint="@string/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/userNameField" />
+            app:layout_constraintTop_toBottomOf="@id/userNameField"
+            app:layout_constraintWidth_percent=".7" />
 
         <EditText
             android:id="@+id/password1Field"
-            android:layout_width="match_parent"
+            style="@style/CustomEditText.LoginPage"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:hint="@string/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailField" />
+            app:layout_constraintTop_toBottomOf="@id/emailField"
+            app:layout_constraintWidth_percent=".7" />
 
         <EditText
             android:id="@+id/password2Field"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".7"
+            style="@style/CustomEditText.LoginPage"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:hint="@string/password"
@@ -66,14 +74,16 @@
 
         <Button
             android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toLeftOf="@id/password2Field"
+            app:layout_constraintRight_toRightOf="@id/password2Field"
+            app:layout_constrainedWidth="true"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin"
             android:backgroundTint="#FF9548"
             android:text="@string/sign_up"
+            android:textSize="22sp"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password2Field" />
 
         <TextView
