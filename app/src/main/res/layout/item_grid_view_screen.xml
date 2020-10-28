@@ -27,8 +27,6 @@
                 android:layout_margin="10dp"
                 android:scaleType="fitXY"/>
 
-
-
             <TextView
                 android:id="@+id/name_tv"
                 android:layout_width="match_parent"

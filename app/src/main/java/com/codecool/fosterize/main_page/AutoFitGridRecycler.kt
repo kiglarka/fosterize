@@ -12,7 +12,7 @@ import java.lang.Exception
 
 class AutoFitGridRecycler : RecyclerView {
     private lateinit var girdlayoutManager : GridLayoutManager
-    private var columnWidth = -1f
+    private var columnWidth = -1
 
     constructor(context: Context) : super(context){
         init(context,null)
@@ -30,7 +30,7 @@ class AutoFitGridRecycler : RecyclerView {
             if ( attributeSet != null){
                 val attributeArray = intArrayOf(android.R.attr.columnWidth)
                 val typedArray = context.obtainStyledAttributes(attributeSet,attributeArray)
-                columnWidth = typedArray.getDimension(0, -1f)
+                columnWidth = typedArray.getDimension(0, 200f).toInt()
                 typedArray.recycle()
             }
 
@@ -47,6 +47,13 @@ class AutoFitGridRecycler : RecyclerView {
 
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
         super.onMeasure(widthSpec, heightSpec)
-        girdlayoutManager.spanCount = 2
+        try {
+            if ( columnWidth > 0){
+                val spanCount = Math.max(1, measuredWidth / columnWidth)
+                girdlayoutManager.spanCount = spanCount
+            }
+        } catch (e : Exception){
+            e.printStackTrace()
+        }
     }
 }
