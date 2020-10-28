@@ -26,14 +26,17 @@
                 android:layout_margin="10dp"/>
 
             <TextView
+                android:id="@+id/name_tv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/doggo_iv"
+                app:layout_constraintBottom_toBottomOf="@id/doggo_iv"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 tools:text="Doggo Name"
                 android:gravity="center"
-                android:textSize="19sp"/>
+                android:textSize="32sp"
+                android:fontFamily="@font/hand_writing"
+                android:textColor="@color/black" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
