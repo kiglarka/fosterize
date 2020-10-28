@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainPageFragment"
-        android:name="com.codecool.fosterize.main_page.MainPageFragment"
+        android:name="com.codecool.fosterize.main_page.view.MainPageFragment"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" />
 </navigation>

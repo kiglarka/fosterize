@@ -10,4 +10,6 @@
     <color name="orange">#FF9548</color>
     <color name="edittext_background">#F4F4F4</color>
     <color name="hint_color">#909090</color>
+    <color name="tab_layout_bg">#e0e0e0</color>
+    <color name="main_feed_bg">#F4F4F4</color>
 </resources>
