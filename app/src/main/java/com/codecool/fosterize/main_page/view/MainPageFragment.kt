@@ -11,8 +11,11 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.codecool.fosterize.R
 import com.codecool.fosterize.main_page.presenter.MainFeedPresenter
 import com.codecool.fosterize.main_page.presenter.MainFeedPresenterInterface
+import com.codecool.fosterize.main_page.view.screens.FullScreenFragment
 import com.codecool.fosterize.main_page.view.screens.GridViewScreen
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_main_page.*
+import kotlinx.android.synthetic.main.fragment_splash_screen_container.*
 
 class MainPageFragment : Fragment(), MainFeedPresenterInterface {
 
@@ -26,7 +29,12 @@ class MainPageFragment : Fragment(), MainFeedPresenterInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter = MainFeedPresenter(this)
-        view_pager_mainmenu.adapter = MainMenuViewPagerAdapter(listOf(GridViewScreen()),parentFragmentManager,lifecycle)
+        val listOfIcons = listOf(context?.getDrawable(R.drawable.ic_grid_icon), context?.getDrawable(R.drawable.ic_full_screen_icon))
+        view_pager_mainmenu.adapter = MainMenuViewPagerAdapter(listOf(GridViewScreen(), FullScreenFragment()),parentFragmentManager,lifecycle)
+        TabLayoutMediator(tab_layout,view_pager_mainmenu) { tab, position ->
+            tab.icon = listOfIcons[position]
+            view_pager_mainmenu.currentItem = tab.position
+        }.attach()
     }
 }
 
