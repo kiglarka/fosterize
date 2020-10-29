@@ -9,51 +9,39 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_grid_view_screen.view.*
 import org.w3c.dom.Attr
 import java.lang.Exception
+import kotlin.properties.Delegates
 
-class AutoFitGridRecycler : RecyclerView {
-    private lateinit var girdlayoutManager : GridLayoutManager
+class AutoFitGridRecycler : GridLayoutManager {
+
     private var columnWidth = -1
+    private var columnWidthChanged : Boolean = true
 
-    constructor(context: Context) : super(context){
-        init(context,null)
+    constructor(context: Context) : super(context, 2){
+        setColumnWidth(columnWidth)
     }
 
-    constructor(context: Context, attributeSet: AttributeSet) : super(context,attributeSet){
-        init(context,attributeSet)
-    }
-    constructor(context: Context,attributeSet: AttributeSet,defStyle : Int) : super(context,attributeSet,defStyle){
-        init(context,attributeSet)
-    }
-
-    fun init(context: Context,attributeSet: AttributeSet?){
-        try {
-            if ( attributeSet != null){
-                val attributeArray = intArrayOf(android.R.attr.columnWidth)
-                val typedArray = context.obtainStyledAttributes(attributeSet,attributeArray)
-                columnWidth = typedArray.getDimension(0, 200f).toInt()
-                typedArray.recycle()
-            }
-
-            girdlayoutManager = GridLayoutManager(context,1)
-            layoutManager = girdlayoutManager
-        } catch ( e : Exception) {
-            e.printStackTrace()
+    private fun setColumnWidth(width : Int){
+        if ( width > 0 && width != columnWidth){
+            columnWidth = width
+            columnWidthChanged = true
         }
     }
 
-    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        return super.dispatchTouchEvent(ev)
+    override fun onLayoutChildren(recycler: RecyclerView.Recycler?, state: RecyclerView.State?) {
+        if ( columnWidthChanged && columnWidth > 0){
+            var totalSpace = 0
+            if ( orientation == VERTICAL){
+                totalSpace = width - paddingRight - paddingLeft
+            } else {
+                totalSpace = height - paddingTop - paddingBottom
+            }
+
+            val spanCount = Math.max(1, totalSpace/columnWidth)
+            setSpanCount(spanCount)
+            columnWidthChanged = false
+        }
+
+        super.onLayoutChildren(recycler, state)
     }
 
-    override fun onMeasure(widthSpec: Int, heightSpec: Int) {
-        super.onMeasure(widthSpec, heightSpec)
-        try {
-            if ( columnWidth > 0){
-                val spanCount = Math.max(1, measuredWidth / columnWidth)
-                girdlayoutManager.spanCount = spanCount
-            }
-        } catch (e : Exception){
-            e.printStackTrace()
-        }
-    }
 }
