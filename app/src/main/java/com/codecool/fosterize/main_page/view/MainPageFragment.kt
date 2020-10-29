@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -29,12 +30,15 @@ class MainPageFragment : Fragment(), MainFeedPresenterInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         presenter = MainFeedPresenter(this)
-        val listOfIcons = listOf(context?.getDrawable(R.drawable.ic_grid_icon), context?.getDrawable(R.drawable.ic_full_screen_icon))
-        view_pager_mainmenu.adapter = MainMenuViewPagerAdapter(listOf(GridViewScreen(), FullScreenFragment()),parentFragmentManager,lifecycle)
-        TabLayoutMediator(tab_layout,view_pager_mainmenu) { tab, position ->
-            tab.icon = listOfIcons[position]
-            view_pager_mainmenu.currentItem = tab.position
-        }.attach()
+
+        context?.let{
+            val listOfIcons = listOf(ContextCompat.getDrawable(it,R.drawable.ic_grid_icon), ContextCompat.getDrawable(it,R.drawable.ic_full_screen_icon))
+            view_pager_mainmenu.adapter = MainMenuViewPagerAdapter(listOf(GridViewScreen(), FullScreenFragment()),parentFragmentManager,lifecycle)
+            TabLayoutMediator(tab_layout,view_pager_mainmenu) { tab, position ->
+                tab.icon = listOfIcons[position]
+                view_pager_mainmenu.currentItem = tab.position
+            }.attach()
+        }
     }
 }
 
