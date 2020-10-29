@@ -11,14 +11,14 @@
     <string name="already_have_account">Már van jelszavam, szeretnék <u>belépni</u></string>
     <string name="submit">Tovább</string>
     <string name="sign_up">Tovább</string>
-    <string name="join_fosterize">CSATLAKOZZ HOZZÁNK</string>
+    <string name="join_fosterize">CSATLAKOZZ</string>
     <string name="app_desc">Szeretnél egy kutyát? Vagy épp ideiglenes gazdája vagy egynek és állandó gazdit keresel neki? Mi segítünk neked!</string>
     <string name="join_to_our">Csatlakozz a</string>
     <string name="community">közösségünkhöz</string>
-    <string name="or_help_us">Segíts,</string>
-    <string name="finding_them">hogy megtalálhassuk őket</string>
-    <string name="find_them">Kereshetsz új</string>
+    <string name="or_help_us">Segíts</string>
+    <string name="finding_them">megtalálni őket</string>
+    <string name="find_them">Vagy kereshetsz</string>
     <string name="forever_home">állandó otthont</string>
-    <string name="doggos">kutyádat</string>
-    <string name="meet_new">Itt megtalálhatod az új</string>
+    <string name="doggos">az új kutyádat</string>
+    <string name="meet_new">Itt megtalálhatod</string>
 </resources>
