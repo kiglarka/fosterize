@@ -5,12 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_margin="5dp">
+    android:layout_margin="5dp"
+    android:background="#E7E7E7">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1.5"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
 
@@ -26,7 +27,20 @@
                 android:layout_height="0dp"
                 app:layout_constraintDimensionRatio="1:1"
                 android:layout_margin="10dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                tools:background="@color/orange"/>
+
+            <com.github.mmin18.widget.RealtimeBlurView
+                android:id="@+id/blurView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintTop_toTopOf="@id/name_tv"
+                app:layout_constraintLeft_toLeftOf="@id/doggo_iv"
+                app:layout_constraintRight_toRightOf="@id/doggo_iv"
+                app:layout_constraintBottom_toBottomOf="@id/name_tv"
+                app:realtimeBlurRadius="80dp"
+                app:realtimeOverlayColor="#8000"/>
 
             <TextView
                 android:id="@+id/name_tv"
@@ -39,7 +53,7 @@
                 tools:text="Doggo Name"
                 android:textSize="32sp"
                 android:fontFamily="@font/hand_writing"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

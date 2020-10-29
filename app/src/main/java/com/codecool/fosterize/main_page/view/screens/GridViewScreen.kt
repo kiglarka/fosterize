@@ -66,6 +66,8 @@ private class GridViewScreenAdapter(
                 .into(view.doggo_iv)
             view.name_tv.text = "${doggo.name} (${doggo.age})"
             Log.d("GridViewScreenAdapter", "${doggo.name}")
+            view.blurView.setBlurRadius(10.0f);
+            view.blurView.setOverlayColor(R.color.black);
         }
     }
 }
